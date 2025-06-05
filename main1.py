@@ -15,7 +15,7 @@ class Article:
 
     def available(self):
         '''Check if the article is available for purchase.'''
-        availability = df.loc[df["id"] == self.article_id, "available"].squeeze()
+        availability = df.loc[df["id"] == self.article_id, "in stock"].squeeze()
         return availability == "yes"
 
 class Receipt:
